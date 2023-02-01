@@ -31,9 +31,9 @@ const Header = function () {
           <Navbar.Link href='#contact'>Contacto</Navbar.Link>
           <Navbar.Link href='/store'>Tienda</Navbar.Link>
 
-          <div className='pl-3 pr-4 py-2 text-bold  text-black'>
+          <div className='pl-3 pr-4 py-2 text-bold  text-gray-400'>
             <Dropdown
-              label='Tratamientos'
+              label='TRATAMIENTOS'
               inline
 
             >
