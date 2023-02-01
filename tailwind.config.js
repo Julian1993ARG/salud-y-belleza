@@ -11,7 +11,7 @@ module.exports = {
   plugins: [require('flowbite/plugin')],
   theme: {
     fontFamily: {
-      primary: 'Inter'
+      primary: 'Monserrat, sans-serif'
     },
     colors: {
       primary: {
