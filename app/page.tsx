@@ -25,7 +25,7 @@ export default function Page () {
           priority
         />
       </section>
-      <section className='relative bg-white w-full flex flex-col justify-center items-center gap-y-4 '>
+      <section className='relative bg-white w-full flex flex-wrap justify-center items-center gap-4 '>
         {
           cardText.map(card => (
             <Card
