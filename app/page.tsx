@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import headerImage from '../public/images/landingTop.jpg';
 import { Card, WorkComponent } from './components';
-import { cardText } from '@/app/model';
+import { cardText, landingRoutes, landingWorks } from './model';
 
 export default function Page () {
   return (
@@ -36,9 +36,21 @@ export default function Page () {
           ))
         }
       </section>
-      <section className='relative'>
-        <WorkComponent />
-      </section>
+      {
+        landingWorks.map((work, index) => (
+          <section className='relative' key={work.id}>
+            <WorkComponent
+              id={landingRoutes[index]?.path}
+              title={work.title}
+              description={work.description}
+              image={work.image}
+              check1={work.check1}
+              check2={work.check2}
+              check3={work.check3}
+            />
+          </section>
+        ))
+      }
     </>
   );
 }
