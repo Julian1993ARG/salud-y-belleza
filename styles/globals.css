@@ -70,7 +70,7 @@
   .layout {
     /* 1100px */
     max-width: 68.75rem;
-    @apply md:mx-auto md:w-11/12 relative;
+    @apply mx-auto md:w-11/12 relative;
   }
 
   .bg-dark a.custom-link {

@@ -36,9 +36,10 @@ export default function Page () {
           ))
         }
       </section>
-      {
+      <section className='flex justify-center flex-wrap gap-4'>
+        {
         landingWorks.map((work, index) => (
-          <section className='relative' key={work.id}>
+          <article className='max-w-md relative -mb-11 ' key={work.id}>
             <WorkComponent
               id={landingRoutes[index]?.path}
               title={work.title}
@@ -48,9 +49,10 @@ export default function Page () {
               check2={work.check2}
               check3={work.check3}
             />
-          </section>
+          </article>
         ))
-      }
+        }
+      </section>
     </>
   );
 }

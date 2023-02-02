@@ -22,7 +22,8 @@
     "next": "^13.0.6",
     "react": "18",
     "react-dom": "18",
-    "react-icons": "^4.7.1"
+    "react-icons": "^4.7.1",
+    "sharp": "^0.31.3"
   },
   "devDependencies": {
     "@types/node": "^18.11.12",
@@ -50,5 +51,4 @@
       "path": "cz-conventional-changelog"
     }
   }
-  
 }
