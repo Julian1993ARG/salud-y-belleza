@@ -1,6 +1,6 @@
 'use client';
 import { Navbar, Dropdown } from 'flowbite-react';
-import Link from 'next/link';
+import { landingRoutes } from '../model';
 import Image from 'next/image';
 import logo from '../../public/logo.png';
 
@@ -37,11 +37,14 @@ const Header = function () {
               inline
 
             >
-              <Dropdown.Item><a href='#work1'>Masajes</a></Dropdown.Item>
-              <Dropdown.Item><Link href='#trat1'>Tratamiento 2</Link></Dropdown.Item>
-              <Dropdown.Item><Link href='#trat1'>Tratamiento 3</Link></Dropdown.Item>
-              <Dropdown.Item><Link href='#trat1'>Tratamiento 4</Link></Dropdown.Item>
-              <Dropdown.Item><Link href='#trat1'>Tratamiento 5</Link></Dropdown.Item>
+              {
+                landingRoutes.map((route) => (
+                  <Dropdown.Item key={route.path}>
+                    <a href={`#${route.path}`}>{route.title}</a>
+                  </Dropdown.Item>
+                ))
+              }
+
             </Dropdown>
           </div>
           <div className='my-2 min-w-full h-2 bg-green-500' />
