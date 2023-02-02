@@ -36,7 +36,7 @@ export default function Page () {
           ))
         }
       </section>
-      <section>
+      <section className='relative'>
         <WorkComponent />
       </section>
     </>

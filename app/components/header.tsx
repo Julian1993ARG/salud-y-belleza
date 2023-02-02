@@ -37,7 +37,7 @@ const Header = function () {
               inline
 
             >
-              <Dropdown.Item><Link href='#trat1'>Tratamiento 1</Link></Dropdown.Item>
+              <Dropdown.Item><a href='#work1'>Masajes</a></Dropdown.Item>
               <Dropdown.Item><Link href='#trat1'>Tratamiento 2</Link></Dropdown.Item>
               <Dropdown.Item><Link href='#trat1'>Tratamiento 3</Link></Dropdown.Item>
               <Dropdown.Item><Link href='#trat1'>Tratamiento 4</Link></Dropdown.Item>
