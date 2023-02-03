@@ -2,17 +2,21 @@
 
 import { useState, lazy } from 'react';
 import { usePathname } from 'next/navigation';
+import Navigation from './navigation';
+import { navRoutes } from '../model';
 
 const DropDown = lazy(() => import('./dropDown'));
 
 export default function NavBar () {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
   const pathname = usePathname();
   const isHome = pathname === '/';
 
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
+
   return (
     <nav className='px-2 h-16 bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 '>
       <div className='container flex flex-wrap items-center justify-between mx-auto'>
@@ -28,18 +32,15 @@ export default function NavBar () {
 
         <div className={`${isOpen ? '' : 'hidden'} w-full md:block md:w-auto`} id='navbar-dropdown'>
           <ul className='flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700'>
-            <li>
-              <a href='#' className='block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white dark:bg-blue-600 md:dark:bg-transparent' aria-current='page'>Home</a>
-            </li>
-            <li>
-              <a href='#' className='block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'>Services</a>
-            </li>
-            <li>
-              <a href='#' className='block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'>Pricing</a>
-            </li>
-            <li>
-              <a href='#' className='block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'>Contact</a>
-            </li>
+
+            {
+              navRoutes.map(route => (
+                <li key={route.id}>
+                  <Navigation slug={route.path} className='block py-2 pl-3 pr-4 text-gray-600 rounded  md:p-0 '>{route.title}</Navigation>
+                </li>
+              ))
+            }
+
             {
               isHome && (
                 <li>

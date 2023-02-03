@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import headerImage from '../public/images/landingTop.jpg';
 import { Card, WorkComponent } from './components';
-import { cardText, landingRoutes, landingWorks } from './model';
+import { cardText, dropDownRoutes, landingWorks } from './model';
 
 export default function Page () {
   return (
@@ -21,7 +21,7 @@ export default function Page () {
       <section className='flex justify-center flex-wrap gap-4'>
         {
         landingWorks.map((work, index) => (
-          <article id={landingRoutes[index]?.path} className='max-w-md relative -mb-11 ' key={work.id}>
+          <article id={dropDownRoutes[index]?.path} className='max-w-md relative -mb-11 ' key={work.id}>
             <WorkComponent
               {...work}
             />

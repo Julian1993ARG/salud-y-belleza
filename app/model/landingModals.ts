@@ -11,7 +11,6 @@ import imageWork8 from '../../public/images/works8.png';
 import imageWork9 from '../../public/images/works9.png';
 import imageWork10 from '../../public/images/works10.png';
 import imageWork11 from '../../public/images/works11.png';
-
 export interface landingWork{
   id: number;
   title: string;
@@ -122,8 +121,11 @@ export const landingWorks:landingWork[] = [
     image: imageWork11
   }
 ];
-
-export const landingRoutes = [
+export interface dropDownRoute {
+  path: string;
+  title: string;
+}
+export const dropDownRoutes = [
   { path: 'work1', title: 'Masajes' },
   { path: 'work2', title: 'Reiki' },
   { path: 'work3', title: 'Biomagnetismo' },
