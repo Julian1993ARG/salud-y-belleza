@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import headerImage from '../public/images/landingTop.jpg';
+import headerImage1920 from '../public/images/landingTop1920.jpg';
+
 import { Card, WorkComponent } from './components';
 import { cardText, dropDownRoutes, landingWorks } from './model';
 
@@ -36,22 +37,22 @@ export default function Page () {
 const HeaderPage = () => {
   return (
     <section
-      className='select-none relative min-w-full overflow-y-hidden'
-      style={{ maxHeight: 'calc(100vh - 26rem)' }}
+      className='select-none relative min-w-full h-[441px]'
     >
-      <div className='pl-7 w-9/12 h-auto absolute z-10 top-1/3 text-white'>
-        <h1 className='pb-4 font-bold text-3xl '>
+      <div className='pl-7 w-9/12 h-auto absolute z-10 top-1/3 text-white md:w-3/5'>
+        <h1 className='pb-4 font-bold text-3xl md:text-4xl'>
           Centro de Salud y Belleza
         </h1>
-        <p className='font-medium text-base'>
+        <p className='font-medium text-base md:text-xl'>
           Tratamientos para el cuidado, fortalecimiento y protección de la salud del cuerpo y la mente.
         </p>
       </div>
       <Image
-        className='object-contain'
+        className='w-full object-cover md:object-fill'
         alt='background'
-        src={headerImage}
+        src={headerImage1920}
         priority
+        fill
       />
     </section>
   );
