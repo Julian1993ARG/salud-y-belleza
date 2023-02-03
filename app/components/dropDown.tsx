@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, FunctionComponent } from 'react';
 import { dropDownRoutes } from '../model';
 
 export default function DropDown () {
@@ -9,6 +9,24 @@ export default function DropDown () {
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
+
+  const toClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+
+    const current = event.currentTarget.getAttribute('href');
+    if (!current) return;
+    const id = current.slice(1);
+
+    const target = document.getElementById(id);
+    if (!target) return;
+    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+
+    window.scrollTo({
+      top: targetPosition,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <>
       <button onClick={handleClick} className='flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-300 md:p-0 md:w-auto'>
@@ -24,7 +42,13 @@ export default function DropDown () {
           {
             dropDownRoutes.map(route => (
               <li key={route.path}>
-                <a href={`#${route.path}`} className=' transition-all block px-4 py-2 hover:bg-pink-300'>{route.title}</a>
+                <MenuItem
+                  href={`#${route.path}`}
+                  className=' transition-all block px-4 py-2 hover:bg-pink-300'
+                  handleClick={toClick}
+                >
+                  {route.title}
+                </MenuItem>
               </li>
             ))
           }
@@ -34,3 +58,16 @@ export default function DropDown () {
     </>
   );
 }
+
+interface MenuItemProps {
+  href: string;
+  handleClick: (event: React.MouseEvent<HTMLAnchorElement>) => void;
+  children: string
+  className?: string
+}
+
+const MenuItem: FunctionComponent<MenuItemProps> = ({ href, children, handleClick, className }) => (
+  <a href={href} onClick={handleClick} className={className}>
+    {children}
+  </a>
+);

@@ -22,7 +22,7 @@ export default function Page () {
       <section className='flex justify-center flex-wrap gap-4'>
         {
         landingWorks.map((work, index) => (
-          <article id={dropDownRoutes[index]?.path} className='max-w-md relative -mb-11 ' key={work.id}>
+          <article id={dropDownRoutes[index]?.path} className='max-w-md relative -mb-11  lg:max-w-md ' key={work.id}>
             <WorkComponent
               {...work}
             />
