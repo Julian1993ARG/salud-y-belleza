@@ -12,7 +12,7 @@ import imageWork9 from '../../public/images/works9.png';
 import imageWork10 from '../../public/images/works10.png';
 import imageWork11 from '../../public/images/works11.png';
 
-interface landingWork{
+export interface landingWork{
   id: number;
   title: string;
   description: string;

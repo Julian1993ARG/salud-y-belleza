@@ -1,21 +1,13 @@
 
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import { CheckSvg, HeaderSvg } from './';
+import { landingWork } from '../model';
 
-interface Props {
-  title: string;
-  id: string | undefined;
-  description: string;
-  image: StaticImageData;
-  check1: string;
-  check2: string;
-  check3: string;
-}
-
-export default function WorkComponent ({ title, id, description, image, check1, check2, check3 }: Props) {
+export default function WorkComponent (prop: landingWork) {
+  const { title, description, image, check1, check2, check3 } = prop;
   return (
     <>
-      <HeaderSvg title={title} id={id} />
+      <HeaderSvg title={title} />
       <article className='flex relative max-w-full items-center'>
         <div className='flex flex-col gap-2 bottom-10 right-2 font-bold text-xs relative'>
           <Image

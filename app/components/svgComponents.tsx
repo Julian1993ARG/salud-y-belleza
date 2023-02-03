@@ -36,9 +36,9 @@ export const CheckSvg = () => (
   </svg>
 );
 
-export const HeaderSvg = ({ title, id }: {title:string, id:string|undefined}) => {
+export const HeaderSvg = ({ title }: { title: string }) => {
   return (
-    <div id={id} className='relative bg-transparent z-10'>
+    <div className='relative bg-transparent z-10'>
       <h5 className='w-36 h-20 flex justify-center items-center absolute transform z-10 max-w-[180px] text-center top-[9%] left-[47%] text-white font-semibold bit:top-[17%] bit:left-[59%]'>
         {title}
       </h5>
