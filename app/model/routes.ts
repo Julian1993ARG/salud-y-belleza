@@ -14,5 +14,10 @@ export const navRoutes = [
     id: 2,
     title: 'Novedades',
     path: '/news'
+  },
+  {
+    id: 3,
+    title: 'Contacto',
+    path: '#footer'
   }
 ];

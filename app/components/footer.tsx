@@ -32,11 +32,10 @@ const SocialMedia = () => {
           href='https://instagram.com/mara.ferreyra.estetica?igshid=YmMyMTA2M2Y='
           target='_blank'
           rel='noreferrer'
-          className='w-full cursor-pointer'
+          className='w-full cursor-pointer '
         >
           <div className='flex h-10 gap-3 pl-3'>
             <InstagramSvg className='w-7' /><p className='font-bold'>Instagram: <span className='block font-normal'>mara.ferreyra.estetica</span> </p>
-
           </div>
         </a>
 

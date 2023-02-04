@@ -20,6 +20,19 @@ export default function Navigation ({
   const patchname = usePathname();
   const isActive = slug === patchname;
 
+  const isToId = slug.startsWith('#');
+
+  if (isToId) {
+    return (
+      <a
+        className={className}
+        href={slug}
+      >
+        {children}
+      </a>
+    );
+  }
+
   return (
     <Link
       className={`${className} ${isActive ? 'text-pink-500 font-bold' : ''} `}
