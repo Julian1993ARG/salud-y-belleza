@@ -20,6 +20,10 @@ export default function NavBar () {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className='px-2 py-4 border-gray-200'>
       <div className='container flex flex-wrap items-center justify-between mx-auto'>
@@ -48,7 +52,7 @@ export default function NavBar () {
             {
               navRoutes.map(route => (
                 <li key={route.id}>
-                  <Navigation slug={route.path} className=' block py-2 pl-3 pr-4 text-gray-600 rounded  md:p-0 hover:text-pink-300'>{route.title}</Navigation>
+                  <Navigation handleClick={closeMenu} slug={route.path} className=' block py-2 pl-3 pr-4 text-gray-600 rounded  md:p-0 hover:text-pink-300'>{route.title}</Navigation>
                 </li>
               ))
             }

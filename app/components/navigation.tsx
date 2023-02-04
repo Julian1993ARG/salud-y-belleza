@@ -7,21 +7,37 @@ import { usePathname } from 'next/navigation';
 export default function Navigation ({
   slug,
   children,
-  className
+  className,
+  handleClick
 }: {
   slug: string,
     children: string,
-  className?: string
+    className?: string,
+    handleClick?: () => void
 }) {
   // Navigating to `/blog/hello-world` will return 'hello-world'
   // for the selected layout segment
   const patchname = usePathname();
   const isActive = slug === patchname;
 
+  const isToId = slug.startsWith('#');
+
+  if (isToId) {
+    return (
+      <a
+        className={className}
+        href={slug}
+      >
+        {children}
+      </a>
+    );
+  }
+
   return (
     <Link
       className={`${className} ${isActive ? 'text-pink-500 font-bold' : ''} `}
       href={slug}
+      onClick={handleClick}
       // Change style depending on whether the link is active
     >
       {children}

@@ -34,8 +34,8 @@ export const landingWorks:landingWork[] = [
     id: 2,
     title: 'REIKI Y MEDITACIÓN',
     description: 'Método curativo en el cual se transmite con las manos al cuerpo del paciente energía universal para curar dolencias y enfermedades.',
-    check1: 'Reduce el estrés',
-    check2: 'Relajación',
+    check1: 'Relajación',
+    check2: 'Reduce el estrés',
     check3: 'Promueve la curación',
     image: imageWork2
   },
@@ -62,8 +62,8 @@ export const landingWorks:landingWork[] = [
     title: 'PEDICURÍA',
     description: 'Tratamiento completo de uñas y pies. Se limpian las impurezas y se eliminan las células muertas. La pedicuría permite tonificar y activar la circulación sanguínea.',
     check1: 'Belleza',
-    check2: 'Eliminación de callos',
-    check3: 'Esmaltado permanente',
+    check2: 'Esmaltado permanente',
+    check3: 'Eliminación de callos',
     image: imageWork5
   },
   {
@@ -86,8 +86,8 @@ export const landingWorks:landingWork[] = [
   },
   {
     id: 8,
-    title: 'DEPILACIÓN TRADICIONAL Y DEFINITIVA',
-    description: 'Tratamientos para mantener la piel sin vello ni pelos enquistados. La depilación definitiva elimina el vello a través del láser, mientras que la depilación tradicional, con cera.',
+    title: 'DEPILACIÓN DEFINITIVA',
+    description: 'Tratamientos para mantener la piel sin vello ni pelos enquistados. La depilación definitiva elimina el vello a través del láser.',
     check1: 'Suavidad',
     check2: 'Máquina Soprano',
     check3: 'Mejora en el aspecto de la piel',
@@ -114,7 +114,7 @@ export const landingWorks:landingWork[] = [
   {
     id: 11,
     title: 'MASAJES REDUCTORES',
-    description: 'Masaje que se realiza de forma fuerte y firme, con el fin de desprender los adipositos o células grasas que se encuentran en la zona de tratar.',
+    description: 'Masaje que se realiza de forma fuerte y firme, con el fin de desprender los adipocitos o células grasas que se encuentran en la zona de tratar.',
     check1: 'Eliminación de linfa',
     check2: 'Modelación de cuerpo',
     check3: 'Favorece el flujo sanguíneo',

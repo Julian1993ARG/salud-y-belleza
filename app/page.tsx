@@ -6,9 +6,9 @@ import { cardText, dropDownRoutes, landingWorks } from './model';
 
 export default function Page () {
   return (
-    <>
+    <section id='landing-page'>
       <HeaderPage />
-      <section className='relative bg-white w-full flex flex-wrap justify-center items-center gap-4 '>
+      <section id='landing-page' className='relative bg-white w-full flex flex-wrap justify-center items-center gap-4 '>
         {
           cardText.map(card => (
             <Card
@@ -30,7 +30,7 @@ export default function Page () {
         ))
         }
       </section>
-    </>
+    </section>
   );
 }
 
@@ -53,6 +53,7 @@ const HeaderPage = () => {
         src={headerImage1920}
         priority
         fill
+        placeholder='blur'
       />
     </section>
   );
