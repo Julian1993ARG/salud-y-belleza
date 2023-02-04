@@ -28,16 +28,18 @@ export default function NavBar () {
     <nav className='px-2 py-4 border-gray-200'>
       <div className='container flex flex-wrap items-center justify-between mx-auto'>
 
-        <a href='#' className='flex items-center'>
+        <a href='#' className='block w-11 h-12 md:w-32 lg:w-36 relative'>
           <Image
             src={smallLogo}
             alt='logo'
-            className='w-10 h-10 md:hidden bit:w-11'
+            className='md:hidden '
+            fill
           />
           <Image
             src={bigLogo}
             alt='logo'
-            className='hidden w-32  md:block lg:w-36'
+            className='hidden md:block'
+            fill
           />
         </a>
 

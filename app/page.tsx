@@ -48,7 +48,7 @@ const HeaderPage = () => {
         </p>
       </div>
       <Image
-        className='w-full object-cover md:object-fill'
+        className='w-full object-cover '
         alt='background'
         src={headerImage1920}
         priority
