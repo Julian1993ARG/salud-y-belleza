@@ -53,6 +53,7 @@ const HeaderPage = () => {
         src={headerImage1920}
         priority
         fill
+        placeholder='blur'
       />
     </section>
   );

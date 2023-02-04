@@ -1,5 +1,5 @@
 import { FC, PropsWithChildren } from 'react';
-import { Header } from './components';
+import { Header, Footer } from './components';
 import '../styles/globals.css';
 
 const RootLayout: FC<PropsWithChildren> = function ({ children }) {
@@ -11,6 +11,7 @@ const RootLayout: FC<PropsWithChildren> = function ({ children }) {
       <body className='layout bg-white'>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
