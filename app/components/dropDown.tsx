@@ -27,6 +27,17 @@ export default function DropDown () {
     });
   };
 
+  const closeToggle = () => {
+    setIsOpen(false);
+  };
+
+  if (typeof window !== 'undefined') {
+    if (document.getElementById('landing-page')) {
+      document.getElementById('landing-page')?.addEventListener('click', () => {
+        if (isOpen) closeToggle();
+      });
+    }
+  }
   return (
     <>
       <button onClick={handleClick} className='flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-300 md:p-0 md:w-auto'>
