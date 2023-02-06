@@ -15,7 +15,7 @@ export default function footer () {
 const SocialMedia = () => {
   return (
     <section>
-      <h4 className='mb-3'>Envianos tu consulta por WhatsApp o Redes Sociales.</h4>
+      <p className='mb-3 font-bold text-lg'>Envianos tu consulta por WhatsApp o Redes Sociales.</p>
       <div className='flex flex-col gap-2'>
         <a
           href='https://www.google.com/maps/place/Pueyrred%C3%B3n+545,+Oliva,+C%C3%B3rdoba/@-32.0366922,-63.5676043,20z/data=!4m5!3m4!1s0x95cce1f76ab711e7:0xccc76b7dd910e2a3!8m2!3d-32.03665!4d-63.5674795?hl=es'

@@ -18,13 +18,12 @@ export default function WorkComponent (prop: landingWork) {
               src={image}
               priority
             />
+            <div className='flex pl-5 flex-col gap-2 relative -top-4 '>
+              <p className='inline-flex items-center '><i className='inline-block w-4 mr-2'><CheckSvg /></i>{check1}</p>
+              <p className='inline-flex items-center '><i className='inline-block w-4 mr-2'><CheckSvg /></i>{check2}</p>
+              <p className='inline-flex items-center '><i className='inline-block w-4 mr-2'><CheckSvg /></i>{check3}</p>
+            </div>
           </Suspense>
-
-          <div className='flex pl-5 flex-col gap-2 relative -top-4 '>
-            <p className='inline-flex items-center '><i className='inline-block w-4 mr-2'><CheckSvg /></i>{check1}</p>
-            <p className='inline-flex items-center '><i className='inline-block w-4 mr-2'><CheckSvg /></i>{check2}</p>
-            <p className='inline-flex items-center '><i className='inline-block w-4 mr-2'><CheckSvg /></i>{check3}</p>
-          </div>
         </div>
         <p className=' flex-1 w-auto h-auto font-normal bit:text-base text-sm text-[#4B4B4B] text-center p-1  -translate-y-7'>
           {description}
