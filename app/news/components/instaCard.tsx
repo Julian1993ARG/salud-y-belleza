@@ -16,6 +16,7 @@ export default function InstaCard ({ image, description, date, url }: Props) {
     month: 'short',
     year: 'numeric'
   });
+
   return (
     <article className='max-w-[22rem] bg-white border border-gray-200 rounded-lg shadow flex flex-col'>
       <div className='relative'>
@@ -26,6 +27,9 @@ export default function InstaCard ({ image, description, date, url }: Props) {
           src={image}
           alt='instagram post'
           priority
+          sizes='(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw'
         />
       </div>
       <div className='p-5 flex flex-col h-full justify-between '>
