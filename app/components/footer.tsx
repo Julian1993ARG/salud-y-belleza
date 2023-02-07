@@ -1,6 +1,7 @@
 import { FooterSvg, ContactForm, InstagramSvg, MapSvg, PhoneSvg } from './';
 import Image from 'next/image';
 import bigLogo from '../../public/bigLogo.png';
+import Link from 'next/link';
 
 export default function footer () {
   return (
@@ -28,13 +29,10 @@ export default function footer () {
               <a href='#' className='mr-4 hover:underline  '>About</a>
             </li>
             <li>
-              <a href='#' className='mr-4 hover:underline '>Privacy Policy</a>
-            </li>
-            <li>
               <a href='#' className='mr-4 hover:underline  '>Licensing</a>
             </li>
             <li>
-              <a href='#' className='hover:underline'>Contact</a>
+              <Link href='/privacityPoliti' className='hover:underline'>Privacy Policy</Link>
             </li>
           </ul>
         </div>
