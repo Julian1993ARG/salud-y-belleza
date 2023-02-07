@@ -1,6 +1,7 @@
 import { InstagramSvg } from '@/app/components';
 import Image from 'next/image';
 import Link from 'next/link';
+import { blurImage } from '../models';
 
 interface Props {
   image: string;
@@ -25,6 +26,8 @@ export default function InstaCard ({ image, description, date, url }: Props) {
           height={500}
           className='rounded-t-lg'
           src={image}
+          blurDataURL={blurImage}
+          placeholder='blur'
           alt='instagram post'
           priority
           sizes='(max-width: 768px) 100vw,
