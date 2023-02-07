@@ -34,12 +34,17 @@ export default function NavBar () {
             alt='logo'
             className='md:hidden '
             fill
+            title='logo Ferreyra Mara Silvina'
+            sizes='(max-width: 768px) 33vw'
           />
           <Image
             src={bigLogo}
             alt='logo'
             className='hidden md:block'
             fill
+            title='logo Ferreyra Mara Silvina'
+            sizes='(min-width: 768px) 33vw,
+              33vw'
           />
         </a>
 
