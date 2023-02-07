@@ -1,4 +1,6 @@
 import { FooterSvg, ContactForm, InstagramSvg, MapSvg, PhoneSvg } from './';
+import Image from 'next/image';
+import bigLogo from '../../public/bigLogo.png';
 
 export default function footer () {
   return (
@@ -8,6 +10,38 @@ export default function footer () {
       <section className='w-full flex flex-wrap p-3 gap-2'>
         <SocialMedia />
         <ContactForm />
+      </section>
+      <section className='bg-[#FFF8DE] w-full'>
+        <div className='flex justify-around pt-6 flex-wrap'>
+          <div className='relative w-48 h-20 mb-4'>
+            <Image
+              src={bigLogo}
+              alt='Ferreyra Mara Logo'
+              fill
+              priority
+              sizes='33vw'
+            />
+          </div>
+
+          <ul className='flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 '>
+            <li>
+              <a href='#' className='mr-4 hover:underline  '>About</a>
+            </li>
+            <li>
+              <a href='#' className='mr-4 hover:underline '>Privacy Policy</a>
+            </li>
+            <li>
+              <a href='#' className='mr-4 hover:underline  '>Licensing</a>
+            </li>
+            <li>
+              <a href='#' className='hover:underline'>Contact</a>
+            </li>
+          </ul>
+        </div>
+        <hr className='my-3 border-gray-200 sm:mx-auto  lg:my-8' />
+        <span className='block text-sm text-gray-500 text-center pb-2 pl-2 '>© Ferreyra Mara Silvina™. All Rights Reserved.
+        </span>
+
       </section>
     </footer>
   );
