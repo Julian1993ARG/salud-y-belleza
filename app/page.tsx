@@ -19,7 +19,7 @@ export default function Page () {
           ))
         }
       </section>
-      <section className='flex justify-center flex-wrap gap-4'>
+      <section className='flex justify-center flex-wrap gap-4 w-full overflow-hidden'>
         {
         landingWorks.map((work, index) => (
           <article id={dropDownRoutes[index]?.path} className='max-w-md relative -mb-11  lg:max-w-md ' key={work.id}>
