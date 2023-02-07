@@ -8,7 +8,7 @@ export default function footer () {
     <footer id='footer' className='w-full'>
       <FooterSvg />
       <p className='mb-3 font-bold text-xl p-3 text-center'>¿En qué tratamiento estás interesado?</p>
-      <section className='w-full flex flex-wrap p-3 gap-2'>
+      <section className='w-full flex flex-wrap p-3 gap-2 lg:justify-center'>
         <SocialMedia />
         <ContactForm />
       </section>
