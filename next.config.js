@@ -4,7 +4,11 @@ const nextConfig = {
     appDir: true
   },
   images: {
-    domains: ['flowbite.com']
+    remotePatterns: [
+      {
+        hostname: 'scontent.cdninstagram.com'
+      }
+    ]
   },
   reactStrictMode: true,
   swcMinify: true,
