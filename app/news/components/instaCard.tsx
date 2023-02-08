@@ -1,7 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import { InstagramSvg } from '@/app/components';
-import Image from 'next/image';
 import Link from 'next/link';
-import { blurImage } from '../models';
 
 interface Props {
   image: string;
