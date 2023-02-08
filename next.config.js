@@ -6,7 +6,7 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        hostname: 'scontent.cdninstagram.com'
+        hostname: '**scontent.cdninstagram.com/**'
       }
     ]
   },
