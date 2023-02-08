@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { InstagramSvg } from '@/app/components';
 import Link from 'next/link';
-import Image from 'next/image';
 
 interface Props {
   image: string;
@@ -19,17 +18,20 @@ export default function InstaCard ({ image, description, date, url }: Props) {
   });
 
   return (
-    <article className='max-w-[22rem] h-auto bg-white border border-gray-200 rounded-lg shadow flex flex-col'>
-      <div className='relative w-full h-[350px]'>
-        <Image
-          fill
+    <article className='max-w-[22rem] bg-white border border-gray-200 rounded-lg shadow flex flex-col'>
+      <div className='relative'>
+        <img
+          width={500}
+          height={500}
           className='rounded-t-lg'
-          priority
           src={image}
           alt='instagram post'
+          sizes='(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw'
         />
       </div>
-      <div className='p-5 flex flex-col h-1/2 justify-between '>
+      <div className='p-5 flex flex-col h-full justify-between '>
 
         <p className='mb-3 font-normal text-gray-700 '>{description}</p>
 
