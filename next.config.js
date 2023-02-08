@@ -7,8 +7,8 @@ const nextConfig = {
     domains: ['scontent.cdninstagram.com'],
     remotePatterns: [
       {
-        protocol: 'https:',
-        hostname: 'scontent.cdninstagram.com'
+        hostname: 'scontent.cdninstagram.com',
+        pathname: '/v/t51.29350-15/**'
       }
     ]
   },
