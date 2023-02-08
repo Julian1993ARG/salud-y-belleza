@@ -21,15 +21,13 @@ export default function InstaCard ({ image, description, date, url }: Props) {
   return (
     <article className='max-w-[22rem] bg-white border border-gray-200 rounded-lg shadow flex flex-col'>
       <div className='relative'>
-        <Image
+        <img
           width={500}
           height={500}
           className='rounded-t-lg'
           src={image}
-          blurDataURL={blurImage}
           placeholder='blur'
           alt='instagram post'
-          priority
           sizes='(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw'
