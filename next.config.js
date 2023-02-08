@@ -4,7 +4,6 @@ const nextConfig = {
     appDir: true
   },
   images: {
-    domains: ['scontent.cdninstagram.com'],
     remotePatterns: [
       {
         hostname: 'scontent.cdninstagram.com',
