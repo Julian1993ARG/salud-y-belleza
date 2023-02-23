@@ -10,11 +10,11 @@ export const navRoutes = [
     title: 'Inicio',
     path: '/'
   },
-  {
-    id: 2,
-    title: 'Novedades',
-    path: '/news'
-  },
+  // {
+  //   id: 2,
+  //   title: 'Novedades',
+  //   path: '/news'
+  // },
   {
     id: 3,
     title: 'Contacto',
