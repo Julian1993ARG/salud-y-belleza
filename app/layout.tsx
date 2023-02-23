@@ -11,8 +11,8 @@ const RootLayout: FC<PropsWithChildren> = function ({ children }) {
       <body className='layout bg-white'>
         <Header />
         {children}
-        <Footer />
       </body>
+      <Footer />
     </html>
   );
 };
